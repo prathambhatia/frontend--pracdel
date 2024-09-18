@@ -29,7 +29,7 @@ function App() {
         onChange={function(e) {
           setInputValue(e.target.value);
         }} 
-        placeholder={"Find sum from 1 to n"} 
+        placeholder={"Find sum from 1 to n"} style={{fontWeight : 'bold'}}
       />
       <br />
       Sum from 1 to {inputValue} is {count}
