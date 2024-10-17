@@ -9,6 +9,7 @@ function App() {
     </div>
   )
 }
+//teleporting count prop to every function in order to make it reach to the lowest function
 function Count({count,setCount}) {
   return <div>
     <Buttons count={count} setCount={setCount} />
