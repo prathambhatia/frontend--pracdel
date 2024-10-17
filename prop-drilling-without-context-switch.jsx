@@ -12,13 +12,14 @@ function App() {
 //teleporting count prop to every function in order to make it reach to the lowest function
 function Count({count,setCount}) {
   return <div>
+    {count}
     <Buttons count={count} setCount={setCount} />
   </div>
 }
 
 function Buttons({count, setCount}) {
   return <div>
-    {count} <br />
+    
     <button onClick={() => {
       setCount(count+1)
     }}>Increase</button>
