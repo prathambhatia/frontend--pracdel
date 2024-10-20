@@ -1,10 +1,10 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 import { CountContext } from "./context";
 
-//code for context.jsx 
 //import { createContext } from "react";
-//export const CountContext = createContext(0);
-
+//export const CountContext = createContext({
+    //count,setCount
+//}); context.jsx file
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,10 +18,10 @@ function App() {
     </div>
   )
 }
-function Count({setCount}) {
+function Count() {
   return <div>
     <CountRenderer />
-    <Buttons setCount={setCount} />
+    <Buttons />
   </div>
 }
 
@@ -32,7 +32,7 @@ function CountRenderer() {
   </div>
 }
 
-function Buttons({setCount}) {
+function Buttons() {
   const count = useContext(CountContext);
   return <div>
     <button onClick={() => {
